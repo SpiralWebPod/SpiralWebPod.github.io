@@ -4,3 +4,5 @@ todo.md
 
 # Mac preview files
 .DS_Store
+fonts/.DS_Store
+*/.DS_Store

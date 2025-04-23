@@ -34,7 +34,7 @@ BODY SERIF: Sedan
 
 @font-face {
   font-family: 'Roboto';
-  src: url("roboto-regular.woff2") format('woff2');
+  src: url("../fonts/roboto-regular.woff2") format('woff2');
   font-display: swap;
 }
 
@@ -45,7 +45,7 @@ h1,h2 {
 
 /* body text gfx settings */
 body {
-  background-image: url(https://genderfulpodcast.neocities.org/655966184-meowster_background-nb.png);
+  background-image: url("../images/655966184-meowster_background-nb.png");
   background-size: cover;
   color: white;
   font-family: "Roboto";
@@ -75,7 +75,7 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   border: 20px solid transparent;
-  border-image: url("https://genderfulpodcast.neocities.org/nonbinary-pinstripe-border.png");
+  border-image: url("../images/nonbinary-pinstripe-border.png");
   border-image-repeat: repeat;
   border-image-slice: 1;
   box-sizing: border-box;
