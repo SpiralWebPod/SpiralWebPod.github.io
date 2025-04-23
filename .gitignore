@@ -1,2 +1,6 @@
-# File to support Jade's local development.
+# Files to support Jade's local development.
 LocalValetDriver.php
+todo.md
+
+# Mac preview files
+.DS_Store
