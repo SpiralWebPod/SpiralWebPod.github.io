@@ -32,97 +32,244 @@ BODY SANS SERIF: Ubuntu Medium
 BODY SERIF: Sedan
 */
 
-@font-face {
-  font-family: 'Roboto';
-  src: url("../fonts/roboto-regular.woff2") format('woff2');
-  font-display: swap;
+@property --color-purple {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #2D2145;
+}
+
+@property --color-violet {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #403A5C;
+}
+
+@property --color-silver {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #828282;
+}
+
+@property --color-silver-50 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #DDDDDD;
+}
+
+@property --color-white {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FFFFFF;
+}
+
+@property --color-black {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #000000;
+}
+
+@property --color-cyan {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #00F7FD;
+}
+
+@property --color-yellow {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FDF51B;
+}
+
+@property --color-lime {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #08E34E;
+}
+
+@property --color-magenta {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #B53CD3;
+}
+
+@property --color-crimson {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FD5206;
 }
 
 /* header gfs settings */
+/*
 h1,h2 {
   text-shadow: -2px -2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, 2px 2px 1px #000000;
+}
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    line-height: 5rem;
 }
 
 /* body text gfx settings */
 body {
-  background-image: url("../images/655966184-meowster_background-nb.png");
-  background-size: cover;
-  color: white;
-  font-family: "Roboto";
-  font-size: 16pt;
-  font-weight: 500;
-  padding: 30px;
-  text-align: center;
+    background-color: var(--color-purple);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16pt;
+    font-weight: 500;
+    padding: 30px;
+    text-align: center;
 }
 
 /* link color settings for hyperlinks in different states. */
-#wrapper a {color: #FFF430}
-#wrapper a:active {color: #55CDFC}
-#wrapper a:visited {
-  color: #ddcdfc;
-  padding: 2px; background: black;
-  display: inline-block;
+#wrapper a {
+    color: var(--color-purple)
 }
+
+#wrapper a:visited {
+    color: var(--color-violet);
+}
+
+#wrapper a:active,
+#wrapper a:hover {
+    color: var(--color-magenta);
+}
+
 
 /* settings for background box behind body text */
 #wrapper {
-  margin: 0 auto;
-  margin-bottom: 0px;
-  max-width: 80vw;
-  width: 800px;
-  background-color: #432e4870;
-  padding: 30px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  border: 20px solid transparent;
-  border-image: url("../images/nonbinary-pinstripe-border.png");
-  border-image-repeat: repeat;
-  border-image-slice: 1;
-  box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 80vw;
+    width: 800px;
+    background-color: var(--color-silver-50);
+    padding: 2rem;
+    padding-top: 0;
+    border-radius: 2rem;
 }
-    
-#wrapper img {
-  width: 600px;
-  max-width: 100%;
+
+img#logo {
+    width: 600px;
+    max-width: 100%;
 }
 
 /* settings for images to keep them smol */
 #wrapper iframe {
-  width: 560px;
-  max-width: 80vw;
-  height: 315px;
+    width: 560px;
+    max-width: 80vw;
+    height: 315px;
 }
 
-/* settings for non-bulleted lists */
+/* settings for non-bulleted lists
 #contentlinks {
   text-align: left;
   width: fit-content;
   margin: 0 auto;
 }
+  */
 #contentlinks ul {
-  padding-inline-start: 0;
+  /* padding-inline-start: 0; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
+  
 #contentlinks ul li {
   list-style-type: none;
-  padding-left: 0;
+  padding: 10px;
   list-style-position: inside;
+  text-align: center;
+} 
+
+#contentlinks img {
+    height: 3rem;
+}
+
+#contentlinks a:hover {
+    opacity: .8;
 }
 
 /* Social Media Settings */
-#socials img {
-  width: 100px;
-  max-width: 10vw;
-  margin-top: 30px;
+
+#patreon {
+    display: inline-block;
+    background-color: var(--color-black);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
 }
-#socials a {
-  text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
+
+#patreon:hover {
+    background-color: var(--color-violet);
+}
+
+#patreon img {
+    height: 2rem;
+    padding: 0 .5rem;
+}
+
+#nifty-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nifty-icons,
+.nifty-icons:visited,
+.nifty-icons:focus,
+.nifty-icons:active {
+    text-decoration: none;
+    border: 0;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    margin: .5rem;
+    color: #ffffff;
+    border-radius: 15%;
+    background-color: var(--color-black);   
+}
+
+.nifty-icons:hover {
+    background-color: var(--color-violet);
+}
+
+ .nifty-icon-svg {
+    display: block;
+    fill: var(--color-white);
+}
+
+#team ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#team li {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
 }
 
 /* Mobile Settings */
 @media only screen and (max-width: 600px) {
-  h1, h2 {font-size: 18px}
-  body {font-size: 16px}
-  #latest {display: none}
+
+    h1,
+    h2 {
+        font-size: 18px
+    }
+
+    body {
+        font-size: 16px
+    }
+
+    #latest {
+        display: none
+    }
 }
