@@ -203,7 +203,8 @@ img#logo {
     width: 15rem;
 }
 
-#patreon:hover {
+a#patreon:hover {
+    opacity: 1;
     background-color: var(--color-violet);
 }
 
