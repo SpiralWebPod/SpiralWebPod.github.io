@@ -3,6 +3,35 @@ CSS is how you can add style to your website, such as colors, fonts, and positio
 HTML content. To learn how to do something, just try searching Google for questions like
 "how to change link color."
 */
+
+
+/* 
+Brand kit colours
+
+Primary
+#2D2145 Purple Midnight
+#403A5C Dusky Violet
+#828282 Silver Stars
+#FFFFFF Cloud White
+#000000 Inky Black
+
+Secondary/Accents
+#00F7FD Cyan Skies
+#FDF51B Moon's Yellow
+#08E34E Luminous Lime
+
+Tertiary
+#B53CD3 Magic Magenta
+#FD5206 Crimson Gleam
+
+
+Brand Kit Fonts
+LOGO: Annie Use Your Telescope
+HEADER: Poppins Semibold
+BODY SANS SERIF: Ubuntu Medium
+BODY SERIF: Sedan
+*/
+
 @font-face {
   font-family: 'Roboto';
   src: url("roboto-regular.woff2") format('woff2');
