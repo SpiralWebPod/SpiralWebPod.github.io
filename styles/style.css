@@ -38,6 +38,12 @@ BODY SERIF: Sedan
     initial-value: #2D2145;
 }
 
+@property --purple-optical {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #3d266b;
+}
+
 @property --violet {
     syntax: "<color>";
     inherits: false;
@@ -154,7 +160,7 @@ header h1 {
 
 /* link color settings for hyperlinks in different states. */
 #wrapper a {
-    color: var(--purple)
+    color: var(--purple-optical)
 }
 
 #wrapper a:visited {
