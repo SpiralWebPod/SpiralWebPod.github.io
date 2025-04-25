@@ -32,98 +32,113 @@ BODY SANS SERIF: Ubuntu Medium
 BODY SERIF: Sedan
 */
 
-@property --color-purple {
+@property --purple {
     syntax: "<color>";
     inherits: false;
     initial-value: #2D2145;
 }
 
-@property --color-violet {
+@property --violet {
     syntax: "<color>";
     inherits: false;
     initial-value: #403A5C;
 }
 
-@property --color-silver {
+@property --silver {
     syntax: "<color>";
     inherits: false;
     initial-value: #828282;
 }
 
-@property --color-silver-50 {
+@property --silver-50 {
     syntax: "<color>";
     inherits: false;
     initial-value: #DDDDDD;
 }
 
-@property --color-white {
+@property --white {
     syntax: "<color>";
     inherits: false;
     initial-value: #FFFFFF;
 }
 
-@property --color-black {
+@property --black {
     syntax: "<color>";
     inherits: false;
     initial-value: #000000;
 }
 
-@property --color-cyan {
+@property --cyan {
     syntax: "<color>";
     inherits: false;
     initial-value: #00F7FD;
 }
 
-@property --color-yellow {
+@property --yellow {
     syntax: "<color>";
     inherits: false;
     initial-value: #FDF51B;
 }
 
-@property --color-lime {
+@property --lime {
     syntax: "<color>";
     inherits: false;
     initial-value: #08E34E;
 }
 
-@property --color-magenta {
+@property --magenta {
     syntax: "<color>";
     inherits: false;
     initial-value: #B53CD3;
 }
 
-@property --color-crimson {
+@property --crimson {
     syntax: "<color>";
     inherits: false;
     initial-value: #FD5206;
 }
 
-/* header gfs settings */
-/*
-h1,h2 {
-  text-shadow: -2px -2px 1px #000000, 2px -2px 1px #000000, -2px 2px 1px #000000, 2px 2px 1px #000000;
-}
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Poppins", sans-serif;
-    line-height: 5rem;
-}
-
-/* body text gfx settings */
 body {
-    background-color: var(--color-purple);
+    background-color: var(--purple);
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
     font-weight: 500;
-    padding: 30px;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#wrapper {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    line-height: 3rem;
+}
+
+hr {
+    margin: 2rem 0 0 0;
+    height: .3em;
+    border-radius: .5rem;
+    border: 0 none;
+    /* opacity: .5; */
+    background: linear-gradient(
+        to right,
+        var(--crimson) 0%,
+        var(--yellow) 25%,
+        var(--lime) 50%,
+        var(--cyan) 75%,
+        var(--magenta) 100%
+    );
+}
+
+header h1 {font-size: 2.5rem;}
 
 header h1 {
     font-family: "Annie Use Your Telescope", cursive;
@@ -132,30 +147,29 @@ header h1 {
     font-size: 3em;
 }
 
+/* settings for background box behind body text */
+#wrapper {
+    background-color: var(--silver-50);
+    border-radius: 2rem;
+}
+
 /* link color settings for hyperlinks in different states. */
 #wrapper a {
-    color: var(--color-purple)
+    color: var(--purple)
 }
 
 #wrapper a:visited {
-    color: var(--color-violet);
+    color: var(--violet);
 }
 
+#wrapper a:focus,
 #wrapper a:active,
 #wrapper a:hover {
-    color: var(--color-magenta);
+    color: var(--magenta);
 }
 
-
-/* settings for background box behind body text */
-#wrapper {
-    margin: 0 auto;
-    max-width: 80vw;
-    width: 800px;
-    background-color: var(--color-silver-50);
-    padding: 2rem;
-    padding-top: 0;
-    border-radius: 2rem;
+#wrapper a:focus {
+    outline: 3px solid var(--magenta);
 }
 
 img#logo {
@@ -163,13 +177,7 @@ img#logo {
     max-width: 100%;
 }
 
-/* settings for images to keep them smol */
-#wrapper iframe {
-    width: 560px;
-    max-width: 80vw;
-    height: 315px;
-}
-
+/* Where to listen buttons */
 #contentlinks ul {
   padding: 0;
   margin: 0;
@@ -195,10 +203,9 @@ img#logo {
 }
 
 /* Social Media Settings */
-
 #patreon {
     display: inline-block;
-    background-color: var(--color-purple);
+    background-color: var(--purple);
     padding: 1rem;
     border-radius: 1rem;
     width: 15rem;
@@ -206,7 +213,7 @@ img#logo {
 
 a#patreon:hover {
     opacity: 1;
-    background-color: var(--color-violet);
+    background-color: var(--violet);
 }
 
 #patreon img {
@@ -233,16 +240,16 @@ a#patreon:hover {
     margin: .5rem;
     color: #ffffff;
     border-radius: 15%;
-    background-color: var(--color-purple);   
+    background-color: var(--purple);   
 }
 
 .nifty-icons:hover {
-    background-color: var(--color-violet);
+    background-color: var(--violet);
 }
 
  .nifty-icon-svg {
     display: block;
-    fill: var(--color-white);
+    fill: var(--white);
 }
 
 #team ul {
@@ -259,19 +266,69 @@ a#patreon:hover {
     padding: 1rem;
 }
 
-/* Mobile Settings */
-@media only screen and (max-width: 600px) {
 
-    h1,
-    h2 {
-        font-size: 18px
-    }
+/* Breakpoints
+Mobile	320px - 480px	Smartphones (portrait) - DEFAULT - work with this in the code above.
+Tablet	481px - 768px	Tablets (portrait), small laptops
+Small Desktop	769px - 1024px	Tablets (landscape), smaller laptops
+Large Desktop	1025px and up	Desktop monitors, larger laptops
+*/
+
+/* Small tablets and larger mobile devices (481px - 768px) */
+@media (min-width: 481px) {
+    /* body {background-color: red} */
 
     body {
-        font-size: 16px
+      font-size: 18px;
     }
 
-    #latest {
-        display: none
+    #wrapper {
+        margin: 1rem;
+        min-width: 60vw;
+        padding: 1rem;
     }
-}
+
+    h1,h2,h3,h4,h5,h6 {
+        line-height: 3rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    } 
+  }
+  
+  /* Tablets and small laptops (769px - 1024px) */
+  @media (min-width: 769px) {
+    /* body {background-color: orange}   */
+
+    header h1 {
+        font-size: 4rem;
+        line-height: 5rem;
+    } 
+  }
+  
+  /* Large desktops and high-resolution screens (1025px and up) */
+  @media (min-width: 1025px) {
+    /* body {background-color: yellow} */
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 5rem;
+    }
+    
+    #wrapper {
+        margin: 2rem;
+        width: 60vw;
+        padding: 2rem;
+    }
+  }
+  
+  /* Extra-large screens (1440px and up) */
+  @media (min-width: 1440px) {
+    /* body {background-color: green} */
+    
+    #wrapper {
+        margin: 2rem;
+        width: 60vw;
+        padding: 2rem;
+    }
+  }
