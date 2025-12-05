@@ -104,6 +104,7 @@ BODY SERIF: Sedan
     initial-value: #FD5206;
 }
 
+
 body {
     background-color: var(--purple);
     font-family: "Ubuntu", sans-serif;
@@ -123,7 +124,12 @@ body {
     border-radius: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Poppins", sans-serif;
     line-height: 3rem;
 }
@@ -134,14 +140,25 @@ hr {
     border-radius: .5rem;
     border: 0 none;
     /* opacity: .5; */
-    background: linear-gradient(
-        to right,
-        var(--crimson) 0%,
-        var(--yellow) 25%,
-        var(--lime) 50%,
-        var(--cyan) 75%,
-        var(--magenta) 100%
-    );
+    background: linear-gradient(to right,
+            var(--crimson) 0%,
+            var(--yellow) 25%,
+            var(--lime) 50%,
+            var(--cyan) 75%,
+            var(--magenta) 100%);
+}
+
+hr.subtle {
+    margin: 2rem 0 0 0;
+    height: .3em;
+    border-radius: .5rem;
+    border: 0 none;
+    background: linear-gradient(to right,
+            rgba(from var(--crimson) r g b / 20%) 0%,
+            rgba(from var(--yellow) r g b / 20%) 25%,
+            rgba(from var(--lime) r g b / 20%) 50%,
+            rgba(from var(--cyan) r g b / 20%) 75%,
+            rgba(from var(--magenta) r g b / 20%) 100%);
 }
 
 header h1 {
@@ -184,20 +201,20 @@ img#logo {
 
 /* Where to listen buttons */
 #contentlinks ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
 }
-  
+
 #contentlinks ul li {
-  list-style-type: none;
-  padding: 10px;
-  list-style-position: inside;
-  text-align: center;
-} 
+    list-style-type: none;
+    padding: 10px;
+    list-style-position: inside;
+    text-align: center;
+}
 
 #contentlinks img {
     height: 3rem;
@@ -245,16 +262,21 @@ a#patreon:hover {
     margin: .5rem;
     color: #ffffff;
     border-radius: 15%;
-    background-color: var(--purple);   
+    background-color: var(--purple);
 }
 
 .nifty-icons:hover {
     background-color: var(--violet);
 }
 
- .nifty-icon-svg {
+.nifty-icon-svg {
     display: block;
     fill: var(--white);
+}
+
+.nifty-icons-small {
+    height: 2rem;
+    width: 2rem;
 }
 
 #team ul {
@@ -265,10 +287,74 @@ a#patreon:hover {
     align-items: center;
     justify-content: center;
 }
+
 #team li {
     list-style-type: none;
     margin: 0;
     padding: 1rem;
+}
+
+
+/* Navigation Styling */
+
+nav {
+    border-radius: 1rem;
+    background: linear-gradient(to right,
+            rgba(from var(--crimson) r g b / 10%) 0%,
+            rgba(from var(--yellow) r g b / 10%) 25%,
+            rgba(from var(--lime) r g b / 10%) 50%,
+            rgba(from var(--cyan) r g b / 10%) 75%,
+            rgba(from var(--magenta) r g b / 10%) 100%);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    line-height: 1rem;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+/* Bios Page Styling */
+.bio {
+    text-align: left;
+}
+
+.bio img {
+    margin: 0 1rem 1rem 0;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.bio h3 {
+    flex-wrap: wrap;
+}
+
+.bio h3 div {
+    width: 100%;
+}
+
+.bio h3 .name {}
+
+.bio h3 .pronouns {
+    color: var(--violet);
+}
+
+.bio h3 .role {
+    color: var(--purple);
+}
+
+.bio h4 {
+    line-height: 2rem;
 }
 
 
@@ -284,7 +370,7 @@ Large Desktop	1025px and up	Desktop monitors, larger laptops
     /* body {background-color: red} */
 
     body {
-      font-size: 18px;
+        font-size: 18px;
     }
 
     #wrapper {
@@ -293,47 +379,78 @@ Large Desktop	1025px and up	Desktop monitors, larger laptops
         padding: 1rem;
     }
 
-    h1,h2,h3,h4,h5,h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         line-height: 3rem;
     }
 
     header h1 {
         font-size: 2.5rem;
-    } 
-  }
-  
-  /* Tablets and small laptops (769px - 1024px) */
-  @media (min-width: 769px) {
+    }
+
+    .bio-image-text {
+        display: flex;
+    }
+
+    .bio img {
+        width: 10rem;
+    }
+
+    .bio h3 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bio h3 div {
+        width: auto;
+    }
+}
+
+/* Tablets and small laptops (769px - 1024px) */
+@media (min-width: 769px) {
     /* body {background-color: orange}   */
 
     header h1 {
         font-size: 4rem;
         line-height: 5rem;
-    } 
-  }
-  
-  /* Large desktops and high-resolution screens (1025px and up) */
-  @media (min-width: 1025px) {
+    }
+}
+
+/* Large desktops and high-resolution screens (1025px and up) */
+@media (min-width: 1025px) {
     /* body {background-color: yellow} */
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         line-height: 5rem;
     }
-    
+
     #wrapper {
         margin: 2rem;
         width: 60vw;
         padding: 2rem;
     }
-  }
-  
-  /* Extra-large screens (1440px and up) */
-  @media (min-width: 1440px) {
+
+    .bio img {
+        width: 15rem;
+    }
+}
+
+/* Extra-large screens (1440px and up) */
+@media (min-width: 1440px) {
     /* body {background-color: green} */
-    
+
     #wrapper {
         margin: 2rem;
         width: 60vw;
         padding: 2rem;
     }
-  }
+}
