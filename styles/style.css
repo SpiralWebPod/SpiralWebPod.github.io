@@ -357,6 +357,11 @@ nav li {
     line-height: 2rem;
 }
 
+/* Contact Page Styling */
+#contact-form-iframe {
+    width: 100%
+}
+
 
 /* Breakpoints
 Mobile	320px - 480px	Smartphones (portrait) - DEFAULT - work with this in the code above.
